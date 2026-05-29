@@ -10,7 +10,7 @@ from paddleocr import PaddleOCR
 # SETTINGS
 # ==========================================================
 
-IMAGE_DIR = r"D:/python/anpr/images"
+IMAGE_DIR = r"c:\Users\RAJAT\Desktop\uru project\anpr"
 
 SUPPORTED_FORMATS = (
     ".jpg",
@@ -34,22 +34,15 @@ plate_model = YOLO(
 
 ocr = PaddleOCR(
 
-    use_gpu=False,
 
     lang='en',
 
-    use_angle_cls=False,
 
     # OpenVINO optimization
-    ir_optim=True,
-
     # CPU optimization
-    enable_mkldnn=True,
 
-    cpu_threads=8,
 
     # OCR model
-    rec_algorithm='SVTR_LCNet'
 )
 
 # ==========================================================
